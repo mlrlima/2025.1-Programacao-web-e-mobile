@@ -1,22 +1,31 @@
 body{
-    color:white;
-    background-color: blue;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  color:white;
+  background-image: url("midias/espaco.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 h1{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    background: linear-gradient(to right, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(to right, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 img{
-    width: 550px;
-    height: 400px;
-    mask:
-   radial-gradient(at 70% 31%,#000 29%,#0000 30%),
-   radial-gradient(at 30% 31%,#000 29%,#0000 30%),
-   linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
-  clip-path: polygon(-41% 0,50% 91%, 141% 0);
+  border: 5px solid rgb(0, 0, 255);
+  border-radius: 10px;
+}
+
+a {
+  color: #26c6da;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2196f3;
+  text-decoration: underline;
+  text-decoration: underline;
 }
