@@ -1,6 +1,6 @@
 body{
   color:white;
-  background-image: url("midias/espaco.jpg");
+  background-image: url("midias/imagens/espaco.jpg");
   background-size: cover;
   background-position: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -65,4 +65,15 @@ a:hover {
   color: #2196f3;
   text-decoration: underline;
   text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("midias/fontes/Minecraft.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.minecraft-fonte{
+  font-family: "Minecraft", sans-serif;
 }

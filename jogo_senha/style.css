@@ -11,3 +11,12 @@ body{
     font-weight: normal;
     font-style: normal;
   }
+
+.moving-image{
+    position: absolute;
+    left: 0;
+    top: 50vh; /* Centers vertically */
+    transform: translateY(-50%);
+    width: 100px; /* Adjust image size */
+    height: auto;
+}
