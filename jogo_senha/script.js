@@ -1,27 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let img = document.getElementById("teste");
-    let direction = 1; // 1 = right, -1 = left
-    let position = 0;
-    let speed = 5; // Speed of movement
-    let maxWidth = window.innerWidth - img.width; // Max movement width
+const qualPagina=document.location.pathname.split("/").pop(); //ver qual pagina chamou o js
 
-    // Update maxWidth on window resize
-    window.addEventListener("resize", () => {
-        maxWidth = window.innerWidth - img.width;
+if(qualPagina==="index.html"){
+    document.getElementById("jogar_botao").addEventListener("click", function(){ //abrir a pg do jogo
+        window.location.href="jogo.html";
     });
-
-    function moveImage() {
-        position += speed * direction; // Move image
-
-        // Reverse direction when hitting the edges
-        if (position >= maxWidth || position <= 0) {
-            direction *= -1;
+}else{
+    function gerarSenha(){
+        let digitos=new Set();
+        while(digitos.size<5){ //gerar 5 numeros aleatorios
+            digitos.add(Math.floor(Math.random()*10));
         }
-
-        img.style.left = `${Math.min(position, maxWidth)}px`; // Ensures no overshoot
-
-        requestAnimationFrame(moveImage); // Continue animation
+        return Array.from(digitos);
     }
 
-    moveImage(); // Start animation
-});
+    function addHistorico(){
+        let historyDiv=document.getElementById("historico");
+        historyDiv.innerHTML = historico.map(entry => `
+            <p>${entry.tentativa} - 
+                ${'🐄'.repeat(entry.regular)} 
+                ${'🍄'.repeat(entry.mushroom)}
+            </p>
+        `).join('');
+    }
+
+    const senha=gerarSenha();
+    let tentativas=0;
+    const maxTentativas=15;
+    const historico=[];
+
+    function verificarInput(){
+        tentativas++;
+        const input=document.getElementById("userInput").value;
+        if(!/^[0-9]{5}$/.test(input)){
+            alert("Digite apenas 5 dígitos diferentes de 0 a 9.");
+            return;
+        }
+        
+        let tentativa=input.split('').map(Number);
+        let qtdMushroom=0, qtdRegular=0;
+        
+        tentativa.forEach((num, i)=>{ //comparando com a senha gerada
+            if(num===senha[i]) qtdMushroom++; //num certo pos certa
+            else if (senha.includes(num)) qtdRegular++; //num certo pos errada
+        });
+        
+        historico.unshift({tentativa:input, mushroom: qtdMushroom, regular: qtdRegular });
+        addHistorico();
+        
+        if(qtdMushroom===5){ //acertou td
+            document.getElementById("resultado").innerHTML="🎉 Parabéns! Você acertou a senha!";
+            document.getElementById("submitBtn").disabled=true; //desabilitar botao de input
+            return;
+        }else if(tentativas>=maxTentativas){
+            document.getElementById("resultado").innerHTML= `😢 Você perdeu! A senha era: ${senha.join('')}`;
+            document.getElementById("submitBtn").disabled=true; //desabilitar botao de input
+            return;
+        }
+    }
+
+    document.getElementById("submitBtn").addEventListener("click", verificarInput);
+}
