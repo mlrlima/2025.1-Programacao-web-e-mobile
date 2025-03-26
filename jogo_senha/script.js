@@ -14,12 +14,16 @@ if(qualPagina==="index.html"){
     }
 
     function addHistorico(){
-        let historyDiv=document.getElementById("historico");
-        historyDiv.innerHTML = historico.map(entry => `
-            <p>${entry.tentativa} - 
-                ${'🐄'.repeat(entry.regular)} 
-                ${'🍄'.repeat(entry.mushroom)}
-            </p>
+        let historyTable = document.getElementById("historico").getElementsByTagName("tbody")[0];
+        historyTable.innerHTML = historico.map((entry, index) => `
+            <tr>
+                <td>${historico.length - index}</td>  <!-- Attempt number (latest at the top) -->
+                <td>${entry.tentativa}</td>
+                <td>
+                    ${'<img src="../midias/imagens/face_regular_cow.png" class="cow-icon">'.repeat(entry.regular)}
+                    ${'<img src="../midias/imagens/face_mushroom_cow.png" class="cow-icon">'.repeat(entry.mushroom)}
+                </td>
+            </tr>
         `).join('');
     }
 
@@ -48,15 +52,19 @@ if(qualPagina==="index.html"){
         addHistorico();
         
         if(qtdMushroom===5){ //acertou td
-            document.getElementById("resultado").innerHTML="🎉 Parabéns! Você acertou a senha!";
+            document.getElementById("resultado").innerHTML="Acertou!";
             document.getElementById("submitBtn").disabled=true; //desabilitar botao de input
             return;
         }else if(tentativas>=maxTentativas){
-            document.getElementById("resultado").innerHTML= `😢 Você perdeu! A senha era: ${senha.join('')}`;
+            document.getElementById("resultado").innerHTML= `Errou! Resposta: ${senha.join('')}`;
             document.getElementById("submitBtn").disabled=true; //desabilitar botao de input
             return;
         }
     }
+
+    document.getElementById("recomecar_botao").addEventListener("click", function(){ //abrir a pg do jogo
+        window.location.href="index.html";
+    });
 
     document.getElementById("submitBtn").addEventListener("click", verificarInput);
 }

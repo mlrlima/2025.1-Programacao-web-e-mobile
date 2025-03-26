@@ -8,34 +8,46 @@
   <body>
 
     <main>
-      <div class="instrucoes">
-        <h1 class="titulo">Jogo da Senha</h1>
-        <p>Como jogar:</p>
-        <p>Uma senha de <u>5 digitos distintos e aleatorios</u> sera gerada.</p>
-        <p>Voce deve tentar acertar, digitando 5 digitos por jogada. </p>
-        <p>Uma vaca cogumelo aparecera para cada <u>digito correto no local correto</u>,</p>
-        <p>e uma vaca marrom aparecera para cada <u>digito correto no local incorreto.</u></p>
-        <p>Você tem 15 tentativas.</p>
-      </div>
+        <div class="dir_jogo">
+            <div class="instrucoes">
+                <h1 class="titulo">Jogo da Senha</h1>
+                <p>Como jogar:</p>
+                <p>Uma senha de <u>5 digitos distintos e aleatorios</u> sera gerada.</p>
+                <p>Voce deve tentar acertar, digitando 5 digitos por jogada. </p>
+                <p>Uma vaca cogumelo aparecera para cada <u>digito correto no local correto</u>,</p>
+                <p>e uma vaca marrom aparecera para cada <u>digito correto no local incorreto.</u></p>
+                <p>Você tem 15 tentativas.</p>
+            </div>
+            <div class="jogar_inicio">
+                <button id="recomecar_botao">Recomecar</button>
+            </div>
+        </div>
 
-      <div class="jogar_inicio">
-            <h1>Jogo da Senha</h1>
-            <p>Tente adivinhar a senha de 5 dígitos únicos!</p>
-            
-            <input type="text" id="userInput" maxlength="5" placeholder="Digite 5 números">
-            <button id="submitBtn">Jogar</button>
-    
-            <div id="resultado"></div>
-            <h2>Histórico:</h2>
-            <div id="historico"></div>
+      <div class="jogar">
+        <h1 class="titulo">Jogo da Senha</h1>
+        
+        <input type="text" id="userInput" maxlength="5" placeholder="Digite">
+        <button id="submitBtn">Jogar</button>
+
+        <div id="resultado"></div>
+
+        <h1 class="titulo">Historico:</h1>
+        <div class="scrow_div">
+            <table id="historico">
+                <thead>
+                    
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
       </div>
 
     </main>
 
     <img id="vaca" src="../midias/imagens/mushroom_cow.webp" class="moving-image">
 
+
     <script src="script.js"></script>
-
-
   </body>
 </html>
