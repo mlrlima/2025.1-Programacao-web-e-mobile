@@ -23,6 +23,11 @@ body{
     height: auto;
 }
 
+.cogumelo{
+    width:auto;
+    height: 30px;
+}
+
 .titulo{
     font-family: "Minecraft", sans-serif;
     color: #a60f12;
