@@ -69,11 +69,20 @@ a:hover {
 
 @font-face {
   font-family: "Minecraft";
-  src: url("midias/fontes/Minecraft.ttf") format("truetype");
+  src: url("midias/fontes/minecraft/Minecraft.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 .minecraft-fonte{
   font-family: "Minecraft", sans-serif;
+}
+
+@font-face {
+  font-family: "Conthrax-SemiBold";
+  src: url("midias/fontes/conthrax/Conthrax-SemiBold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.conthrax-fonte{
+  font-family: "Conthrax-SemiBold", sans-serif;
 }

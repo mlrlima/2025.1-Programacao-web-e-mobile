@@ -12,10 +12,10 @@ body{
 
 @font-face {
     font-family: "Minecraft";
-    src: url("../midias/fontes/Minecraft.ttf") format("truetype");
+    src: url("../midias/fontes/minecraft/Minecraft.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 .moving-image{
     transform: translateY(-50%);

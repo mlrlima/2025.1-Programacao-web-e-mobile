@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Conthrax-SemiBold";
+    src: url("../midias/fontes/conthrax/Conthrax-SemiBold.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.nome{
+    font-family: "Conthrax-SemiBold", sans-serif;
+}
+
+.home-dir{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    color: rgba(2,23,41);
+}
+.home-esq{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-image: url("../midias/imagens/blue-wavy-background.jpg");
+}
