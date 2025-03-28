@@ -6,6 +6,7 @@
 }
 .nome{
     font-family: "Conthrax-SemiBold", sans-serif;
+    -webkit-text-stroke: 3px rgba(173,230,243);
 }
 
 .home-dir{
