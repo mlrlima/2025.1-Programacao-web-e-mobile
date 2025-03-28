@@ -4,12 +4,32 @@
     font-weight: normal;
     font-style: normal;
 }
+
+a {
+    color: rgba(173,230,243);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: orange;
+    text-decoration: underline;
+    text-decoration: underline;
+  }
+
 .nome{
     font-family: "Conthrax-SemiBold", sans-serif;
     -webkit-text-stroke: 3px rgba(173,230,243);
 }
+.nome-pequeno{
+    font-family: "Conthrax-SemiBold", sans-serif;
+    -webkit-text-stroke: 1px rgba(173,230,243);
+    color: rgba(2,23,41);
+    font-size: 25px;
+}
 
-.home-dir{
+.home-esq{
+    padding-top:200px;
     width: 50%;
     align-items: center;
     justify-content: center;
@@ -17,11 +37,13 @@
     font-size: 50px;
     color: rgba(2,23,41);
 }
-.home-esq{
+.sobre_mim{
+    padding-top:200px;
     width: 50%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color:rgba(255,255,255);
 }
 
 body{
@@ -29,4 +51,135 @@ body{
     gap: 20px;
     padding: 20px;
     background-image: url("../midias/imagens/blue-wavy-background.jpg");
+}
+
+.header {
+    background: rgba(173,230,243, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.59);
+
+
+    overflow: hidden;
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    font-family: "Conthrax-SemiBold", sans-serif;
+}
+
+.icone{
+    width:45px;
+    height: 45px;
+}
+
+.links{
+    display: grid;
+    padding: 16px;
+    font-size: 10px;
+    horizontal-align: middle;
+}
+
+.titulo{
+    font-family: "Conthrax-SemiBold", sans-serif;
+    color:rgba(2,23,41);
+    -webkit-text-stroke: 2px orange;
+}
+
+
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  background: rgba(173,230,243, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 4px solid rgba(255, 255, 255, 0.59);
+
+    border-radius: 5%;
+    max-height: 500px;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: orange;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: orange;
+}
+
+.carrossel{
+    max-width: 90%;
+    max-height: 400px;
 }
