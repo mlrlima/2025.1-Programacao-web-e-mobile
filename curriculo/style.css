@@ -6,6 +6,7 @@
 }
 
 a{
+  font-family: "Conthrax-SemiBold";
   color: rgba(173,230,243);
   text-decoration: none;
   text-decoration: underline;
@@ -101,6 +102,11 @@ body{
     -webkit-text-stroke: 2px orange;
 }
 
+.competencias-portfolio{
+  padding-top: 10%;
+  display: flex;
+}
+
 .competencias{
   width: 30%;
     align-items: center;
@@ -131,6 +137,70 @@ td,tr{
   padding: 8px;
   border-radius: 5%;
 }
+
+.portfolio{
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.projeto{
+
+  padding:13px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 80%;
+
+  background: rgba(173,230,243, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  border: 4px solid rgba(255, 255, 255, 0.59);
+  border-radius: 5%;
+}
+.nome_projeto{
+  font-family: "Conthrax-SemiBold", sans-serif;
+  -webkit-text-stroke: 1px rgba(173,230,243);
+  color: rgba(2,23,41);
+  font-size: 22px;
+  padding: 13px;
+}
+
+.info_img_projeto{
+  display: flex;
+  width: 100%;
+}
+
+.img_projeto{
+  right: 0%;
+  max-width: 300%;
+  max-height: 300px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.59);
+}
+
+.info_projeto{
+  padding:13px;
+  max-width: 80%;
+}
+
+.descricao_projeto, .linguagens_projeto{
+  color: #f2f2f2;
+}
+
+details > summary {
+  padding: 2px 6px;
+  cursor: pointer;
+}
+details > summary::marker {
+  color: rgba(2,23,41); /* Default color */
+}
+details > summary:hover::marker {
+  color: orange; /* Change color on hover */
+}
+
 
 
 
