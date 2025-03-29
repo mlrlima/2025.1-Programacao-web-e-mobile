@@ -5,17 +5,17 @@
     font-style: normal;
 }
 
-a {
-    color: rgba(173,230,243);
-    text-decoration: none;
-    text-decoration: underline;
-  }
+a{
+  color: rgba(173,230,243);
+  text-decoration: none;
+  text-decoration: underline;
+}
   
-  a:hover {
-    color: orange;
-    text-decoration: underline;
-    text-decoration: underline;
-  }
+a:hover{
+  color: orange;
+  text-decoration: underline;
+  text-decoration: underline;
+}
 
 .nome{
     font-family: "Conthrax-SemiBold", sans-serif;
@@ -25,11 +25,17 @@ a {
     font-family: "Conthrax-SemiBold", sans-serif;
     -webkit-text-stroke: 1px rgba(173,230,243);
     color: rgba(2,23,41);
-    font-size: 25px;
+    font-size: 30px;
+}
+
+.sobre_mim{
+  display: flex;
+  width: 100%;
 }
 
 .home-esq{
-    padding-top:200px;
+    margin: auto;
+    padding-top:150px;
     width: 50%;
     align-items: center;
     justify-content: center;
@@ -37,8 +43,8 @@ a {
     font-size: 50px;
     color: rgba(2,23,41);
 }
-.sobre_mim{
-    padding-top:200px;
+.home-dir{
+    padding-top:150px;
     width: 50%;
     align-items: center;
     justify-content: center;
@@ -47,10 +53,10 @@ a {
 }
 
 body{
-    display: flex;
     gap: 20px;
     padding: 20px;
     background-image: url("../midias/imagens/blue-wavy-background.jpg");
+    background-attachment: fixed;
 }
 
 .header {
@@ -61,6 +67,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.59);
 
 
+    z-index:1;
     overflow: hidden;
     top:0;
     left:0;
@@ -73,13 +80,19 @@ body{
 .icone{
     width:45px;
     height: 45px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .links{
     display: grid;
-    padding: 16px;
+    padding: 13px;
     font-size: 10px;
-    horizontal-align: middle;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .titulo{
@@ -88,8 +101,36 @@ body{
     -webkit-text-stroke: 2px orange;
 }
 
+.competencias{
+  width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:rgba(255,255,255);
+}
 
+.linguagens{
+  justify-content: center;
 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: rgba(173,230,243, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  border: 4px solid rgba(255, 255, 255, 0.59);
+  border-radius: 5%;
+
+  width: 30%;
+
+}
+td,tr{
+  text-align: center;
+  padding: 8px;
+  border-radius: 5%;
+}
 
 
 
