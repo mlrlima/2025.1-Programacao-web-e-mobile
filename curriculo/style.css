@@ -10,11 +10,13 @@ a{
   color: rgba(173,230,243);
   text-decoration: none;
   text-decoration: underline;
+  text-shadow: 0px 0px 3px rgba(2,23,41);
 }
   
 a:hover{
   color: rgba(216,115,38);
   text-decoration: underline;
+  text-shadow: 0px 0px 3px rgba(2,23,41);
 }
 
 .nome{
@@ -226,6 +228,7 @@ body{
 .descricao_projeto{
   color: #f2f2f2;
   font-size: 18px;
+  text-shadow: 0px 0px 3px rgba(2,23,41);
 }
 
 details > summary {
@@ -301,6 +304,8 @@ details > summary:hover::marker {
   bottom: 8px;
   width: 100%;
   text-align: center;
+  text-shadow: 0px 0px 3px rgba(2,23,41);
+  font-size: 18px;
 }
 
 /* Number text (1/3 etc) */
